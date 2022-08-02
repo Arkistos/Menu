@@ -1,0 +1,78 @@
+main {
+  text-align: center;
+  vertical-align: center;
+  line-height: 100vh
+}
+
+
+.menu{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+  width: 30px;
+  border: 0.5px solid;
+  border-radius: 50px;
+  flex-wrap: none;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+
+.menu-on{
+  width:500px;
+}
+
+.menu-off{
+  width:45px;
+}
+
+
+#toggleButton{
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+#cross-Up{
+  transform-origin: 5px 5px;
+  transform:  rotate(45deg);
+  transition: 0.5s;
+}
+
+#cross-Middle{
+  opacity: 0;
+  transition: 0.3s;
+}
+
+#cross-Down{
+  transform-origin:10px 15px;
+  transform: rotate(-45deg);
+  transition:0.5s;
+
+}
+
+#burger-Up{
+  transition: 0.5s;
+}
+
+#burger-Middle{
+  opacity: 1;
+  transition: 0.3s;
+}
+
+#burger-Down{
+  transition: 0.5s;
+}
+
+#nav{
+  display: flex;
+  justify-content: space-around;
+  width: 400px;
+}
+
+#nav a{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: none;
+  overflow: hidden;
+  white-space: nowrap;
+}
