@@ -9,31 +9,33 @@ main {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 30px;
-  width: 30px;
+  gap: 0px;
+  width: 80px;
+  height: 50px;
   border: 0.5px solid;
-  border-radius: 50px;
+  border-radius: 25px;
   flex-wrap: none;
   overflow: hidden;
   transition: 0.5s ease-in-out;
 }
 
-.menu-on{
-  width:500px;
-}
 
-.menu-off{
-  width:45px;
-}
 
+#toggle{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
 
 #toggleButton{
+  
+  margin-left: 3px;
+  margin-right: 10px;
   cursor: pointer;
-  margin-left: 10px;
 }
 
 #cross-Up{
-  transform-origin: 5px 5px;
+  transform-origin: 10px 15px;
   transform:  rotate(45deg);
   transition: 0.5s;
 }
@@ -44,7 +46,7 @@ main {
 }
 
 #cross-Down{
-  transform-origin:10px 15px;
+  transform-origin:10px 25px;
   transform: rotate(-45deg);
   transition:0.5s;
 

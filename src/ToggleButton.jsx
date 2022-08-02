@@ -20,11 +20,11 @@ export default class ToggleButton extends React.Component {
   render()
   {
     return (
-      <div>
-        <svg id='toggleButton' onClick={this.click} viewBox="0 -13 60 40" width="40" height="40">
-          <line id={`${this.state.display?'cross':'burger'}-Up`} strokeWidth='2' stroke='black' x1="0" y1="0" x2="40" y2="0"></line>
-          <line id={`${this.state.display?'cross':'burger'}-Middle`} strokeWidth='2' stroke='black' x1="0" y1="10" x2="40" y2="10"></line>
-          <line id={`${this.state.display?'cross':'burger'}-Down`} strokeWidth='2' stroke='black' x1="0" y1="20" x2="40" y2="20"></line>
+      <div id='toggle'>
+        <svg id='toggleButton' onClick={this.click}  width="40" height="40">
+          <line id={`${this.state.display?'cross':'burger'}-Up`} strokeWidth='2' stroke='black' x1="5" y1="10" x2="40" y2="10"></line>
+          <line id={`${this.state.display?'cross':'burger'}-Middle`} strokeWidth='2' stroke='black' x1="5" y1="20" x2="40" y2="20"></line>
+          <line id={`${this.state.display?'cross':'burger'}-Down`} strokeWidth='2' stroke='black' x1="5" y1="30" x2="40" y2="30"></line>
         </svg>
       </div>
     );
