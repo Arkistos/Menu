@@ -6,14 +6,8 @@ main {
 
 
 .menu{
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 0px;
-  width: 80px;
-  height: 50px;
   border: 0.5px solid;
-  border-radius: 25px;
+  border-radius: 50px;
   flex-wrap: none;
   overflow: hidden;
   transition: 0.5s ease-in-out;
@@ -29,8 +23,10 @@ main {
 
 #toggleButton{
   
-  margin-left: 3px;
-  margin-right: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   cursor: pointer;
 }
 
@@ -46,7 +42,7 @@ main {
 }
 
 #cross-Down{
-  transform-origin:10px 25px;
+  transform-origin:6px 25px;
   transform: rotate(-45deg);
   transition:0.5s;
 
@@ -68,7 +64,11 @@ main {
 #nav{
   display: flex;
   justify-content: space-around;
-  width: 400px;
+  flex-direction: column;
+  align-items:center;
+  width: 50%;
+  height: 60%;
+  margin-bottom: 5px;
 }
 
 #nav a{

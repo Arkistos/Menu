@@ -6,31 +6,58 @@ export default class Menu extends React.Component{
     super(props)
     this.state = {
       display: false,
-      test: [<div>gorl,egr</div>,<div>goregjreg</div>]
     }
     this.clickButton = this.clickButton.bind(this)
-    
   }
 
+  
   clickButton(state){
     this.setState({display: state})
   }
 
   
-
-
   render(){
 
+    
+    
+
     const barStyle = {
-      width: `${this.state.display&&this.props.links!=undefined?(this.props.links.length+1)*100:50}px`
+      width: `${this.state.display&&this.props.links!=undefined?(this.props.links.length+1)*100:50}px`,
+      display: 'flex',
+      justifyContent: 'flex-start',
+      alignItems: 'center',
+      gap: '0px',
+      height: '50px'
+    }
+
+    switch (this.props.direction){
+      case 'left':
+        barStyle.flexDirection= 'row-reverse'
+        barStyle.position= 'absolute'
+        barStyle.right='30px'
+        break;
+      case 'bottom' :
+        barStyle.width= `${this.state.display?'75':'50'}px`
+        barStyle.height= `${this.state.display&&this.props.links!=undefined?(this.props.links.length+1)*50:50}px`
+        barStyle.flexDirection= 'column'
+        break;
+        
+      case 'top' : 
+        barStyle.width= `${this.state.display?'75':'50'}px`
+        barStyle.height= `${this.state.display&&this.props.links!=undefined?(this.props.links.length+1)*50:50}px`
+        barStyle.flexDirection= 'column-reverse'
+        barStyle.position= 'absolute'
+        barStyle.bottom='30px'
+        break;
     }
     
+
     return(
       <div className={`menu`} style={barStyle}>
         <ToggleButton toggleMenu={this.clickButton}/>
           {
             this.props.links!=undefined && 
-            <div id='nav' style={{width: `${(this.props.links.length+1)*100}px`}}>
+            <div id='nav' style={{width: `${(this.props.links.length+1)*100}px`, flexDirection: this.props.direction=='bottom'||this.props.direction=='top'?'column':'row'}}>
               {this.props.links.map((e,i)=>
               <div key={i}>{e}</div>
               )}
