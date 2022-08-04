@@ -9,6 +9,6 @@ const root = createRoot(container);
 
 root.render(
   <StrictMode>
-    <Menu direction='bottom'  links={[<a href='#'>section 1</a>,<a href='#'>section 2</a>]}/>
+    <Menu direction='right'  links={[<a href='#'>section 1</a>,<a href='#'>section 2</a>]}/>
   </StrictMode>
 );

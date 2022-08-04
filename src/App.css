@@ -22,7 +22,6 @@ main {
 }
 
 #toggleButton{
-  
   margin-left: 5px;
   margin-right: 5px;
   margin-top: 5px;
@@ -64,7 +63,7 @@ main {
 #nav{
   display: flex;
   justify-content: space-around;
-  flex-direction: column;
+  flex-direction: row;
   align-items:center;
   width: 50%;
   height: 60%;

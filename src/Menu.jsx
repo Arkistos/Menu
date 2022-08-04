@@ -17,18 +17,22 @@ export default class Menu extends React.Component{
 
   
   render(){
-
+    var barStyle = this.props.style
     
-    
 
-    const barStyle = {
+    barStyle = {
+      ...barStyle,
       width: `${this.state.display&&this.props.links!=undefined?(this.props.links.length+1)*100:50}px`,
       display: 'flex',
       justifyContent: 'flex-start',
       alignItems: 'center',
       gap: '0px',
-      height: '50px'
+      height: '50px',
     }
+
+    console.log(barStyle)
+
+    //Object.assign(barStyle, updateBarStyle, )
 
     switch (this.props.direction){
       case 'left':
